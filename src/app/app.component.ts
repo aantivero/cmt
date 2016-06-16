@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {AngularFire, FirebaseListObservable} from 'angularfire2';
 
 @Component({
   moduleId: module.id,
@@ -8,4 +9,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Cash Management Tool';
+  items: FirebaseListObservable<any[]>;
+  
+  constructor(af: AngularFire){
+    this.items = af.database.list('items');
+  }
 }
