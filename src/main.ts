@@ -14,7 +14,7 @@ bootstrap(AppComponent, [
     apiKey: "AIzaSyAVpIqYpetwJi3i87kKCwv72TEXBKDaa5Y",
     authDomain: "project-3608165319188981417.firebaseapp.com",
     databaseURL: "https://project-3608165319188981417.firebaseio.com",
-    storageBucket: "project-3608165319188981417.appspot.com",
+    storageBucket: "project-3608165319188981417.appspot.com"
   })
 ]);
 
