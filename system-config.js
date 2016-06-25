@@ -5,9 +5,17 @@
  * User Configuration.
  **********************************************************************************************/
 /** Map relative paths to URLs. */
-var map = {};
+var map = {
+    'firebase': 'vendor/firebase/firebase.js',
+    'angularfire2': 'vendor/angularfire2'
+};
 /** User packages configuration. */
-var packages = {};
+var packages = {
+    angularfire2: {
+        defaultExtension: 'js',
+        main: 'angularfire2.js'
+    }
+};
 ////////////////////////////////////////////////////////////////////////////////////////////////
 /***********************************************************************************************
  * Everything underneath this line is managed by the CLI.
@@ -26,6 +34,7 @@ var barrels = [
     // App specific barrels.
     'app',
     'app/shared',
+    'app/rc-test-app-component',
 ];
 var cliSystemConfigPackages = {};
 barrels.forEach(function (barrelName) {
