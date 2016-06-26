@@ -1,0 +1,17 @@
+<div>
+  <h1>
+    Entidades Financieras del BCRA
+  </h1>
+  <ul>
+    <li *ngFor="let entidad of entidades | async">
+      <input type="text" #updateCodigo [value]="entidad.codigo" />
+      <input type="text" #updateDenominacion [value]="entidad.denominacion" />
+      <button (click)="update(entidad.$key, updateCodigo.value, updateDenominacion.value)">Actualizar</button>
+      <button (click)="delete(entidad.$key)">Eliminar</button>
+    </li>
+  </ul>
+  <input type="text" placeholder="C&oacute;digo" #newCodigo />
+  <input type="text" placeholder="Denominacion" #newDenominacion />
+  <button (click)="add(newCodigo.value, newDenominacion.value)">Agregar</button>
+  <button (click)="deleteAll()">Borrar Todos</button>
+</div>

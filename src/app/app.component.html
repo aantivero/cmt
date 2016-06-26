@@ -1,6 +1,7 @@
 <h1>
   {{title}}
 </h1>
+<app-entidades-financieras></app-entidades-financieras>
 <ul>
   <li *ngFor="let item of items | async">
       <input type="text" #updatesize [value] = "item.text"/>

@@ -40,6 +40,7 @@ const barrels: string[] = [
   'app',
   'app/shared',
   'app/rc-test-app-component',
+  'app/entidades-financieras',
   /** @cli-barrel */
 ];
 
